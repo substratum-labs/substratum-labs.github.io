@@ -1,17 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Head from '@docusaurus/Head';
+import {HtmlClassNameProvider} from '@docusaurus/theme-common';
 import styles from './index.module.css';
 
 export default function Home(): React.JSX.Element {
-  useEffect(() => {
-    document.documentElement.classList.add('homepage-page');
-    return () => {
-      document.documentElement.classList.remove('homepage-page');
-    };
-  }, []);
-
   return (
-    <>
+    <HtmlClassNameProvider className="homepage-page">
       <Head>
         <title>Substratum Labs</title>
         <meta name="description" content="The Infrastructure Beneath Intelligence" />
@@ -151,6 +145,6 @@ export default function Home(): React.JSX.Element {
           &copy; 2026 SUBSTRATUM LABS. ALL SYSTEMS NOMINAL.
         </footer>
       </div>
-    </>
+    </HtmlClassNameProvider>
   );
 }
