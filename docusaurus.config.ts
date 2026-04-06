@@ -76,7 +76,7 @@ const config: Config = {
           items: [
             {label: 'Castor', href: 'https://github.com/substratum-labs/castor'},
             {label: 'Roche', href: 'https://github.com/substratum-labs/roche'},
-            {label: 'Mneme (soon)', href: 'https://github.com/substratum-labs'},
+            {label: 'Mnemos (soon)', href: 'https://github.com/substratum-labs'},
           ],
         },
         {
