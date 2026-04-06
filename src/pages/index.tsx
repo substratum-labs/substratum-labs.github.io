@@ -1,11 +1,13 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
+import Layout from '@theme/Layout';
 import {HtmlClassNameProvider} from '@docusaurus/theme-common';
 import styles from './index.module.css';
 
 export default function Home(): React.JSX.Element {
   return (
     <HtmlClassNameProvider className="homepage-page">
+      <Layout>
       <Head>
         <title>Substratum Labs</title>
         <meta name="description" content="The Infrastructure Beneath Intelligence" />
@@ -103,19 +105,6 @@ export default function Home(): React.JSX.Element {
               </a>
             </div>
 
-            {/* Mini-Castor */}
-            <div className={styles.projectCard}>
-              <div className={styles.projectHeader}>
-                <a href="https://github.com/substratum-labs/mini-castor" target="_blank" rel="noopener noreferrer">
-                  <h2>Mini-Castor</h2>
-                </a>
-                <span className={styles.badge}>Lightweight Kernel</span>
-              </div>
-              <p className={styles.projectDesc}>
-                A stripped-down, zero-dependency version of the Castor microkernel. Designed specifically for rapid prototyping and educational purposes.
-              </p>
-            </div>
-
             {/* Roche */}
             <div className={styles.projectCard}>
               <div className={styles.projectHeader}>
@@ -140,11 +129,8 @@ export default function Home(): React.JSX.Element {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className={styles.footer}>
-          &copy; 2026 SUBSTRATUM LABS. ALL SYSTEMS NOMINAL.
-        </footer>
       </div>
+      </Layout>
     </HtmlClassNameProvider>
   );
 }

@@ -40,9 +40,8 @@ html.homepage-page #__docusaurus > div {
   background: transparent !important;
 }
 
-/* Hide Docusaurus navbar and footer on the homepage */
-html.homepage-page .navbar,
-html.homepage-page .footer {
+/* Hide Docusaurus navbar on the homepage (it has its own nav) */
+html.homepage-page .navbar {
   display: none !important;
 }
 
