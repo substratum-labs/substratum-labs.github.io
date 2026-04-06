@@ -33,20 +33,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cormorant Garamond', serif;
 }
 
-/*
- * Homepage: make Docusaurus wrappers transparent so the
- * fixed-position star-sky background layers (z-index < 0) show through.
- */
-html.homepage-page {
-  background: #0B0E1A !important;
-}
-
-html.homepage-page body,
-html.homepage-page #__docusaurus,
-html.homepage-page #__docusaurus > div {
-  background: transparent !important;
-}
-
 /* Hide Docusaurus navbar on the homepage (it has its own nav) */
 html.homepage-page .navbar {
   display: none !important;
