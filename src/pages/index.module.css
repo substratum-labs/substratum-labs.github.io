@@ -113,6 +113,20 @@
   font-weight: 500;
 }
 
+.navLink {
+  color: var(--parchment-white);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--amber-transit);
+}
+
 /* Buttons */
 .btn {
   background-color: var(--amber-transit);

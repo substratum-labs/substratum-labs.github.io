@@ -56,6 +56,7 @@ export default function Home(): React.JSX.Element {
             </svg>
             <span className={styles.logoText}>Substratum Labs</span>
           </a>
+          <a href="/blog" className={styles.navLink}>Blog</a>
         </nav>
 
         {/* Hero */}
