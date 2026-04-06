@@ -25,8 +25,20 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Hide navbar on homepage — the page has its own nav */
-.homepage-wrapper + .navbar,
-.homepage-wrapper ~ .navbar {
-  display: none;
+/*
+ * Homepage: make all Docusaurus wrappers transparent so the
+ * fixed-position star-sky background layers (z-index < 0) show through.
+ * The .homepage-page class is set via <Head> <html className>.
+ */
+html.homepage-page,
+html.homepage-page body,
+html.homepage-page #__docusaurus,
+html.homepage-page #__docusaurus > div {
+  background: transparent !important;
+}
+
+/* Hide Docusaurus navbar and footer on the homepage */
+html.homepage-page .navbar,
+html.homepage-page .footer {
+  display: none !important;
 }

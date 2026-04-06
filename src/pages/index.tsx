@@ -1,8 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Head from '@docusaurus/Head';
 import styles from './index.module.css';
 
 export default function Home(): React.JSX.Element {
+  useEffect(() => {
+    document.documentElement.classList.add('homepage-page');
+    return () => {
+      document.documentElement.classList.remove('homepage-page');
+    };
+  }, []);
+
   return (
     <>
       <Head>
