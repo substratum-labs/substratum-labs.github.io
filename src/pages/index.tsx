@@ -106,7 +106,7 @@ export default function Home(): React.JSX.Element {
             {/* Mini-Castor */}
             <div className={styles.projectCard}>
               <div className={styles.projectHeader}>
-                <a href="https://github.com/substrate-lab/mini-castor" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/substratum-labs/mini-castor" target="_blank" rel="noopener noreferrer">
                   <h2>Mini-Castor</h2>
                 </a>
                 <span className={styles.badge}>Lightweight Kernel</span>
