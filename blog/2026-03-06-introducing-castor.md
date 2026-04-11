@@ -1,7 +1,6 @@
 ---
 slug: introducing-castor
 title: "Introducing Castor: A Secure Microkernel for LLM Agents"
-authors: [substratum-labs]
 tags: [announcement, architecture]
 ---
 

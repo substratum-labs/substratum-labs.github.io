@@ -1,7 +1,6 @@
 ---
 slug: why-os-kernel
 title: "Why an OS Kernel for AI Agents?"
-authors: [substratum-labs]
 tags: [architecture, deep-dive]
 ---
 

@@ -1,7 +1,6 @@
 ---
 slug: castor-server-managed-agents
 title: "An open-source, wire-compatible Anthropic Managed Agents"
-authors: [substratum-labs]
 tags: [release, agents, open-source, deep-dive]
 ---
 

@@ -1,7 +1,6 @@
 ---
 slug: harness-is-a-bad-concept
 title: "Why 'harness' is a bad concept"
-authors: [substratum-labs]
 tags: [agents, architecture, critique]
 ---
 
