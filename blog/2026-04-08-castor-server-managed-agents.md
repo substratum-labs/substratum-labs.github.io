@@ -168,6 +168,6 @@ Once the protocol is public, the open-source replacement is inevitable. `castor-
 
 ---
 
-- Code: <https://github.com/substratum-labs/castor-server>
-- SDK bug standalone reproducer: <https://github.com/substratum-labs/castor-server/blob/main/scripts/sdk_bug_repro.py>
-- Castor kernel: <https://pypi.org/project/castor-kernel/> ([source](https://github.com/substratum-labs/castor))
+- Code: [github.com/substratum-labs/castor-server](https://github.com/substratum-labs/castor-server)
+- SDK bug standalone reproducer: [sdk_bug_repro.py](https://github.com/substratum-labs/castor-server/blob/main/scripts/sdk_bug_repro.py)
+- Castor kernel: [pypi.org/project/castor-kernel](https://pypi.org/project/castor-kernel/) ([source](https://github.com/substratum-labs/castor))
