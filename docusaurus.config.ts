@@ -75,6 +75,7 @@ const config: Config = {
           title: 'Projects',
           items: [
             {label: 'Castor', href: 'https://github.com/substratum-labs/castor'},
+            {label: 'Castor Server', href: 'https://github.com/substratum-labs/castor-server'},
             {label: 'Roche', href: 'https://github.com/substratum-labs/roche'},
             {label: 'Mnemos (soon)', href: 'https://github.com/substratum-labs'},
           ],

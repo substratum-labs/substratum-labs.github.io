@@ -105,6 +105,19 @@ export default function Home(): React.JSX.Element {
               </a>
             </div>
 
+            {/* Castor Server */}
+            <div className={styles.projectCard}>
+              <div className={styles.projectHeader}>
+                <a href="https://github.com/substratum-labs/castor-server" target="_blank" rel="noopener noreferrer">
+                  <h2>Castor Server</h2>
+                </a>
+                <span className={styles.badge}>Agent Runtime</span>
+              </div>
+              <p className={styles.projectDesc}>
+                An open-source, wire-compatible implementation of Anthropic Managed Agents. Self-host the same HTTP protocol with any model, full auditability, and deterministic replay.
+              </p>
+            </div>
+
             {/* Roche */}
             <div className={styles.projectCard}>
               <div className={styles.projectHeader}>
