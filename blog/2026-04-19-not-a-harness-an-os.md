@@ -4,7 +4,7 @@ title: "Not a harness. An OS."
 tags: [agents, architecture, castor]
 ---
 
-In our [previous post](../harness-is-a-bad-concept), we analyzed three problems with the concept of "harness": a residual definition, layer collapse, and the wrong direction. The next question is: how should the components of an agent system actually be structured?
+In our [previous post](/blog/harness-is-a-bad-concept), we analyzed three problems with the concept of "harness": a residual definition, layer collapse, and the wrong direction. The next question is: how should the components of an agent system actually be structured?
 
 The answer isn't new. Every mature area of software has followed the same path: everything starts mixed together, then someone draws the boundaries, gives each component a name, an interface, and a set of invariants, and assembles them into a coherent structure. Operating systems did this for hardware. Databases did this for storage. HTTP did this for networking.
 
