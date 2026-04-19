@@ -1,7 +1,6 @@
 ---
 slug: not-a-harness-an-os
 title: "Not a harness. An OS."
-authors: [substratum-labs]
 tags: [agents, architecture, castor]
 ---
 
