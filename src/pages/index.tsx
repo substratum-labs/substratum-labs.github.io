@@ -89,10 +89,10 @@ export default function Home(): React.JSX.Element {
                 <a href="https://github.com/substratum-labs/castor" target="_blank" rel="noopener noreferrer">
                   <h2>Castor</h2>
                 </a>
-                <span className={styles.badge}>Microkernel</span>
+                <span className={styles.badge}>Kernel</span>
               </div>
               <p className={styles.projectDesc}>
-                A microkernel-based secure execution layer for AI agents. Intercepts and controls tool calls with budget enforcement, human-in-the-loop gating, and deterministic replay.
+                An OS kernel for AI agents. Process model, memory management, journaling, fork, scheduling, and resource accounting as kernel primitives. Any agent framework runs on top — LangChain, CrewAI, AutoGen, or your own.
               </p>
               <a
                 href="https://substratum-labs.github.io/castor-docs/"
@@ -111,10 +111,10 @@ export default function Home(): React.JSX.Element {
                 <a href="https://github.com/substratum-labs/castor-server" target="_blank" rel="noopener noreferrer">
                   <h2>Castor Server</h2>
                 </a>
-                <span className={styles.badge}>Agent Runtime</span>
+                <span className={styles.badge}>Agent Platform</span>
               </div>
               <p className={styles.projectDesc}>
-                An open-source, wire-compatible implementation of Anthropic Managed Agents. Self-host the same HTTP protocol with any model, full auditability, and deterministic replay.
+                Self-hosted agent deployment platform, built on Castor. Native HTTP/SSE API with fork, deterministic replay, and budget control. Adapter layers for Anthropic Managed Agents and OpenAI SDKs — bring your existing client code, run on your infrastructure with any model.
               </p>
             </div>
 
@@ -124,10 +124,10 @@ export default function Home(): React.JSX.Element {
                 <a href="https://github.com/substratum-labs/roche" target="_blank" rel="noopener noreferrer">
                   <h2>Roche</h2>
                 </a>
-                <span className={styles.badge}>Sandbox Orchestrator</span>
+                <span className={styles.badge}>Sandbox</span>
               </div>
               <p className={styles.projectDesc}>
-                A universal sandbox orchestrator for secure AI agent code execution. One unified abstraction over Docker, Firecracker, and WebAssembly with secure-by-default isolation.
+                Capability-scoped sandbox orchestrator for AI agent execution. One unified abstraction over Docker, Firecracker, and WebAssembly. The grant defines what the agent can do — the runtime enforces it.
               </p>
               <a
                 href="https://substratum-labs.github.io/roche-docs/"
