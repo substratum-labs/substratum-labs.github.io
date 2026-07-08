@@ -407,8 +407,7 @@ export default function Home(): React.JSX.Element {
               </div>
               <div>
                 <h3>Research</h3>
-                <a href="/blog">Papers</a>
-                <a href="/blog">Safety Notes</a>
+                <a href="/blog">Research & Technical Notes</a>
               </div>
               <div>
                 <h3>Company</h3>

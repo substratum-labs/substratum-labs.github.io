@@ -31,8 +31,9 @@ const config: Config = {
         docs: false,
         blog: {
           showReadingTime: true,
-          blogTitle: 'Substratum Labs Blog',
-          blogDescription: 'Technical deep-dives from the Substratum Labs team',
+          blogTitle: 'Research & Technical Notes',
+          blogDescription:
+            'Technical notes on agent infrastructure, trusted autonomy, and the systems behind intelligent space operations.',
           postsPerPage: 5,
           blogSidebarCount: 'ALL',
           feedOptions: {
@@ -85,8 +86,7 @@ const config: Config = {
         {
           title: 'Research',
           items: [
-            {label: 'Papers', to: '/blog'},
-            {label: 'Safety Notes', to: '/blog'},
+            {label: 'Research & Technical Notes', to: '/blog'},
           ],
         },
         {

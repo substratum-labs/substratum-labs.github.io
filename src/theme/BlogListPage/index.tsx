@@ -77,10 +77,8 @@ function BlogListPageContent(props: Props): ReactNode {
     <Layout>
       <div className={styles.blogListPage}>
         <div className={styles.header}>
-          <h1 className={styles.title}>Blog</h1>
-          <p className={styles.subtitle}>
-            Technical deep-dives from the Substratum Labs team
-          </p>
+          <h1 className={styles.title}>{metadata.blogTitle}</h1>
+          <p className={styles.subtitle}>{metadata.blogDescription}</p>
         </div>
         <div className={styles.grid}>
           {items.map((item) => (
