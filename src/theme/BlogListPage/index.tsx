@@ -33,7 +33,13 @@ function BlogListPageMetadata(props: Props): ReactNode {
 function BlogCard({item}: {item: Props['items'][number]}): ReactNode {
   const {content: BlogPostContent} = item;
   const {metadata} = BlogPostContent;
-  const {permalink, title, date, formattedDate, tags, description, readingTime} = metadata;
+  const {permalink, title, date, tags, description, readingTime} = metadata;
+  const formattedDate = new Intl.DateTimeFormat('en', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(date));
 
   return (
     <Link to={permalink} className={styles.card}>

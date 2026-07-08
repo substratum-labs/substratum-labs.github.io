@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Substratum Labs',
-  tagline: 'The Infrastructure Beneath Intelligence',
+  tagline: 'Intelligent Infrastructure for Space Operations',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -72,30 +72,28 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Projects',
+          title: 'Products',
           items: [
-            {label: 'Castor', href: 'https://github.com/substratum-labs/castor'},
-            {label: 'Castor Server', href: 'https://github.com/substratum-labs/castor-server'},
-            {label: 'Roche', href: 'https://github.com/substratum-labs/roche'},
-            {label: 'Mnemos (soon)', href: 'https://github.com/substratum-labs'},
+            {label: 'ArgoNavis', href: 'https://substratumlabs.ai/#argonavis'},
+            {label: 'ArgusOrb', href: 'https://substratumlabs.ai/#argusorb'},
           ],
         },
         {
-          title: 'Docs',
+          title: 'Research',
           items: [
-            {label: 'Castor Docs', href: 'https://substratum-labs.github.io/castor-docs/'},
-            {label: 'Roche Docs', href: 'https://substratum-labs.github.io/roche-docs/'},
+            {label: 'Papers', to: '/blog'},
+            {label: 'Safety Notes', href: 'https://substratumlabs.ai/#about'},
           ],
         },
         {
-          title: 'More',
+          title: 'Company',
           items: [
-            {label: 'Blog', to: '/blog'},
-            {label: 'GitHub', href: 'https://github.com/substratum-labs'},
+            {label: 'About', href: 'https://substratumlabs.ai/#about'},
+            {label: 'Contact', href: 'https://substratumlabs.ai/#contact'},
           ],
         },
       ],
-      copyright: `\u00a9 ${new Date().getFullYear()} Substratum Labs. All Systems Nominal.`,
+      copyright: `\u00a9 ${new Date().getFullYear()} Substratum Labs. All systems nominal.`,
     },
     prism: {
       theme: prismThemes.github,
