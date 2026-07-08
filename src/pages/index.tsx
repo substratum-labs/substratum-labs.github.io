@@ -289,7 +289,7 @@ export default function Home(): React.JSX.Element {
               <span className={styles.logoText}>Substratum Labs</span>
             </a>
             <div className={styles.navLinks}>
-              <a href="#argonavis" className={styles.navLink}>ArgoNavis</a>
+              <a href="/contact" className={styles.navLink}>ArgoNavis</a>
               <a href="https://argusorb.io/" className={styles.navLink}>ArgusOrb</a>
               <a href="/blog" className={styles.navLink}>Research</a>
               <a href="/about" className={styles.navLink}>About</a>
@@ -408,6 +408,12 @@ export default function Home(): React.JSX.Element {
               <div>
                 <h3>Research</h3>
                 <a href="/blog">Research & Technical Notes</a>
+              </div>
+              <div>
+                <h3>Open Source</h3>
+                <a href="https://github.com/substratum-labs/castor">Castor</a>
+                <a href="https://github.com/substratum-labs/roche">Roche</a>
+                <a href="https://github.com/substratum-labs">All repositories</a>
               </div>
               <div>
                 <h3>Company</h3>

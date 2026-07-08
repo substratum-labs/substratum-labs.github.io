@@ -14,6 +14,23 @@ import type {Props} from '@theme/BlogListPage';
 import BlogListPageStructuredData from '@theme/BlogListPage/StructuredData';
 import styles from './styles.module.css';
 
+const openSourceProjects = [
+  {
+    name: 'Castor',
+    label: 'Accountable Agent Runtime',
+    description:
+      'An accountable runtime for AI agents, with checkpoint and replay, human approval, capability controls, and resource budgets.',
+    href: 'https://github.com/substratum-labs/castor',
+  },
+  {
+    name: 'Roche',
+    label: 'Sandbox Orchestration',
+    description:
+      'A universal sandbox orchestrator for isolated agent execution, lifecycle management, and consistent control across backends.',
+    href: 'https://github.com/substratum-labs/roche',
+  },
+];
+
 function BlogListPageMetadata(props: Props): ReactNode {
   const {metadata} = props;
   const {
@@ -86,6 +103,39 @@ function BlogListPageContent(props: Props): ReactNode {
           ))}
         </div>
         <BlogListPaginator metadata={metadata} />
+        {metadata.page === 1 && (
+          <section className={styles.openSourceSection} aria-labelledby="open-source-title">
+            <div className={styles.openSourceHeader}>
+              <h2 id="open-source-title">Open Source Infrastructure</h2>
+              <p>
+                General-purpose systems that support accountable, isolated agent execution.
+              </p>
+            </div>
+            <div className={styles.projectGrid}>
+              {openSourceProjects.map((project) => (
+                <article className={styles.projectCard} key={project.name}>
+                  <span className={styles.projectLabel}>{project.label}</span>
+                  <h3>{project.name}</h3>
+                  <p>{project.description}</p>
+                  <a
+                    className={styles.projectLink}
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View on GitHub &rarr;
+                  </a>
+                </article>
+              ))}
+            </div>
+            <a
+              className={styles.allProjectsLink}
+              href="https://github.com/substratum-labs"
+              target="_blank"
+              rel="noopener noreferrer">
+              Explore all projects on GitHub &rarr;
+            </a>
+          </section>
+        )}
       </div>
     </Layout>
   );

@@ -61,7 +61,7 @@ const config: Config = {
     navbar: {
       title: 'Substratum Labs',
       items: [
-        {href: 'https://substratumlabs.ai/#argonavis', label: 'ArgoNavis', position: 'left'},
+        {to: '/contact', label: 'ArgoNavis', position: 'left'},
         {href: 'https://argusorb.io/', label: 'ArgusOrb', position: 'left'},
         {to: '/blog', label: 'Research', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
@@ -87,6 +87,14 @@ const config: Config = {
           title: 'Research',
           items: [
             {label: 'Research & Technical Notes', to: '/blog'},
+          ],
+        },
+        {
+          title: 'Open Source',
+          items: [
+            {label: 'Castor', href: 'https://github.com/substratum-labs/castor'},
+            {label: 'Roche', href: 'https://github.com/substratum-labs/roche'},
+            {label: 'All repositories', href: 'https://github.com/substratum-labs'},
           ],
         },
         {
