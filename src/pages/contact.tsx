@@ -24,51 +24,43 @@ export default function Contact(): React.JSX.Element {
         <div className={styles.shell}>
           <section className={styles.hero}>
             <div>
-              <span className={styles.eyebrow}>Contact</span>
-              <h1>Request a demo.</h1>
+              <h1>Contact</h1>
               <p className={styles.lede}>
-                Talk with us about satellite fleet safety, risk triage, maneuver planning, orbital data
-                foundations, or operator-reviewed AI systems for mission operations.
+                Reach out to discuss Substratum Labs, ArgoNavis, ArgusOrb, or intelligent infrastructure for
+                space operations.
               </p>
-            </div>
-            <aside className={styles.heroPanel}>
-              <h2>Best first conversation</h2>
-              <p>
-                Share the fleet, workflow, or decision problem you want to improve. We will route the
-                discussion toward ArgoNavis, ArgusOrb, or the underlying research.
-              </p>
-            </aside>
-          </section>
-
-          <section className={styles.contactCard} aria-label="Contact details">
-            <span className={styles.metric}>Request Demo</span>
-            <h2>Start with the operational problem.</h2>
-            <p className={styles.contactLine}>
-              Email <a href="mailto:contact@substratumlabs.ai">contact@substratumlabs.ai</a> with a short
-              note on your mission context, current workflow, and what needs to become safer or more
-              autonomous.
-            </p>
-            <div className={styles.ctaRow}>
-              <a className={styles.button} href="mailto:contact@substratumlabs.ai">Email Substratum Labs</a>
-              <a className={styles.textLink} href="/blog">Read research</a>
             </div>
           </section>
 
-          <section className={styles.grid} aria-label="Contact topics">
-            <article className={styles.card}>
-              <span className={styles.metric}>ArgoNavis</span>
-              <h2>Operations console</h2>
-              <p>Operator-facing workflows for risk triage, maneuver planning, and safety gates.</p>
+          <section className={styles.contactGrid} aria-label="Contact options">
+            <article className={styles.contactCard}>
+              <span className={styles.metric}>Request Demo</span>
+              <h2>Talk with us about an operational workflow.</h2>
+              <p className={styles.contactLine}>
+                For satellite fleet safety, risk triage, maneuver planning, orbital intelligence, or
+                operator-reviewed AI systems.
+              </p>
+              <div className={`${styles.ctaRow} ${styles.contactCta}`}>
+                <a
+                  className={styles.button}
+                  href="mailto:contact@substratumlabs.ai?subject=Request%20demo">
+                  Request demo
+                </a>
+              </div>
             </article>
-            <article className={styles.card}>
-              <span className={styles.metric}>ArgusOrb</span>
-              <h2>Orbital foundation</h2>
-              <p>Data, models, and algorithms for space traffic, uncertainty, and anomalies.</p>
-            </article>
-            <article className={styles.card}>
-              <span className={styles.metric}>Research</span>
-              <h2>Auditable autonomy</h2>
-              <p>Operator-reviewed AI systems for high-trust space operations.</p>
+            <article className={styles.contactCard}>
+              <span className={styles.metric}>General Inquiry</span>
+              <h2>Contact the team.</h2>
+              <p className={styles.contactLine}>
+                For partnerships, research, company questions, or anything that does not fit a product demo.
+              </p>
+              <div className={`${styles.ctaRow} ${styles.contactCta}`}>
+                <a
+                  className={styles.button}
+                  href="mailto:contact@substratumlabs.ai?subject=General%20inquiry">
+                  Email Substratum Labs
+                </a>
+              </div>
             </article>
           </section>
 
