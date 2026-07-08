@@ -95,61 +95,130 @@ function TrustIcon({type}: {type: string}): React.JSX.Element {
 
 function ArgoNavisGraphic(): React.JSX.Element {
   return (
-    <svg className={styles.productGraphic} viewBox="0 0 520 220" aria-hidden="true">
+    <svg className={styles.productGraphic} viewBox="0 0 680 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
       <defs>
-        <filter id="soft-blue-glow" x="-40%" y="-40%" width="180%" height="180%">
-          <feGaussianBlur stdDeviation="2.4" result="blur" />
+        <filter id="argo-blue-glow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="2.8" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="argo-risk-glow" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
       </defs>
-      <rect className={styles.graphFrame} x="1" y="1" width="518" height="218" rx="10" />
-      <path className={styles.graphGrid} d="M40 110h440M260 22v176" />
-      <circle className={styles.scopeRing} cx="260" cy="110" r="42" />
-      <circle className={styles.scopeRingMuted} cx="260" cy="110" r="74" />
-      <circle className={styles.scopeRingMuted} cx="260" cy="110" r="105" />
-      <path className={styles.coastTrack} d="M70 68c94 32 161 56 232 67 52 8 96 10 158 18" />
-      <path className={styles.riskTrack} d="M84 176c90-27 178-61 253-89 42-15 76-28 106-37" />
-      <path className={styles.burnArc} d="M164 79c74 54 140 82 223 82 31 0 57-2 79-4" filter="url(#soft-blue-glow)" />
-      <circle className={styles.riskNode} cx="219" cy="102" r="9" />
-      <circle className={styles.riskPulse} cx="219" cy="102" r="23" />
-      <path className={styles.burnVector} d="M186 88l-19-23 28 11z" />
-      <path className={styles.assetMarker} d="M118 86l10-10 10 10-10 10z" />
-      <path className={styles.assetMarkerBlue} d="M381 161l8-8 8 8-8 8z" />
-      <path className={styles.warningMarker} d="M310 78l8-15 8 15z" />
-      <text className={styles.graphLabel} x="32" y="34">HUD: RISK TRIAGE</text>
-      <text className={styles.graphAlert} x="32" y="54">RISK SCORE: 1.42e-4 [HIGH]</text>
-      <text className={styles.graphLabel} x="318" y="34">TCA: T-12m 42s</text>
-      <text className={styles.graphBlueLabel} x="168" y="72">DELTA-V BURN</text>
-      <text className={styles.graphBlueLabel} x="32" y="196">MANEUVER PLAN: +0.12 m/s</text>
-      <text className={styles.graphLabel} x="440" y="196">RANGE: 124m</text>
+      <rect className={styles.graphFrame} x="1" y="1" width="678" height="318" rx="10" />
+      <g className={styles.graphFineGrid}>
+        <path d="M38 92h604M38 178h604M38 244h604" />
+        <path d="M170 32v256M340 32v256M510 32v256" />
+      </g>
+      <path className={styles.graphGrid} d="M38 178h604M340 32v256" />
+      <g transform="translate(340 178)">
+        <circle className={styles.scopeRing} r="40" />
+        <circle className={styles.scopeRingMuted} r="75" />
+        <circle className={styles.scopeRingMuted} r="112" />
+        <path className={styles.scopeTicks} d="M0-112v12M0 100v12M-112 0h12M100 0h12" />
+      </g>
+      <path className={styles.coastTrack} d="M84 124C190 146 265 171 340 188c92 21 171 33 255 52" />
+      <path className={styles.riskTrack} d="M105 274C209 229 302 183 388 139c70-36 130-63 190-84" />
+      <path
+        className={styles.burnArc}
+        d="M270 146C320 186 385 216 458 226c52 7 103 6 155 0"
+        filter="url(#argo-blue-glow)"
+      />
+      <g filter="url(#argo-risk-glow)">
+        <circle className={styles.riskPulseOuter} cx="327" cy="177" r="31" />
+        <circle className={styles.riskPulse} cx="327" cy="177" r="20" />
+        <circle className={styles.riskNode} cx="327" cy="177" r="9" />
+      </g>
+      <path className={styles.burnVector} d="M270 146l-31-13 13-16z" />
+      <path className={styles.assetMarker} d="M191 145l11-11 11 11-11 11z" />
+      <path className={styles.assetMarkerBlue} d="M502 229l10-10 10 10-10 10z" />
+      <path className={styles.warningMarker} d="M422 139l10-18 10 18z" />
+      <path className={styles.vectorGuide} d="M252 128l-17-15M432 139l-5 24" />
+      <text className={styles.graphLabel} x="38" y="36">HUD: CONJUNCTION ASSESSMENT</text>
+      <text className={styles.graphAlert} x="38" y="58">COLLISION RISK: 1.42e-4 [HIGH]</text>
+      <text className={styles.graphLabel} x="437" y="36">TCA: T-12m 42s</text>
+      <text className={styles.graphBlueLabel} x="237" y="108">ΔV BURN</text>
+      <text className={styles.graphBlueLabel} x="38" y="291">MANEUVER PLAN: ΔV BURN (+0.12 m/s)</text>
+      <text className={styles.graphLabel} x="572" y="291">RANGE: 124m</text>
     </svg>
   );
 }
 
 function ArgusOrbGraphic(): React.JSX.Element {
   return (
-    <svg className={styles.productGraphic} viewBox="0 0 520 220" aria-hidden="true">
-      <rect className={styles.graphFrame} x="1" y="1" width="518" height="218" rx="10" />
-      <circle className={styles.orbitalCore} cx="260" cy="112" r="45" />
-      <ellipse className={styles.orbitLine} cx="260" cy="112" rx="136" ry="30" transform="rotate(10 260 112)" />
-      <ellipse className={styles.orbitLine} cx="260" cy="112" rx="144" ry="34" transform="rotate(-28 260 112)" />
-      <ellipse className={styles.orbitLine} cx="260" cy="112" rx="122" ry="28" transform="rotate(46 260 112)" />
-      <ellipse className={styles.orbitLineDashed} cx="260" cy="112" rx="96" ry="118" transform="rotate(30 260 112)" />
-      <path className={styles.meshLine} d="M160 76l110 71 92-88M174 154l170-3M214 48l30 130M296 51l-73 105" />
-      <circle className={styles.satNode} cx="154" cy="78" r="5" />
-      <circle className={styles.satNode} cx="250" cy="59" r="4" />
-      <circle className={styles.satNode} cx="345" cy="150" r="5" />
-      <circle className={styles.satNode} cx="298" cy="166" r="4" />
-      <circle className={styles.satNodeWhite} cx="218" cy="164" r="5" />
-      <circle className={styles.anomalyNode} cx="318" cy="69" r="9" />
-      <text className={styles.graphLabel} x="38" y="34">ORBIT DATABASE: ONLINE</text>
-      <text className={styles.graphBlueLabel} x="38" y="54">ACTIVE TRACKS: 10,880 SATS</text>
-      <text className={styles.graphLabel} x="412" y="34">EPOCH: UTC-7</text>
-      <text className={styles.graphLabel} x="38" y="196">SWEEP STATUS: CONTINUOUS INGESTION</text>
-      <text className={styles.graphAlert} x="372" y="196">ANOMALIES: 14,149</text>
+    <svg className={styles.productGraphic} viewBox="0 0 680 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <defs>
+        <radialGradient id="orb-core-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#355f7a" stopOpacity="0.18" />
+          <stop offset="70%" stopColor="#142f45" stopOpacity="0.07" />
+          <stop offset="100%" stopColor="#07101b" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id="earth-ocean" cx="36%" cy="30%" r="72%">
+          <stop offset="0%" stopColor="#26475f" />
+          <stop offset="58%" stopColor="#142f46" />
+          <stop offset="100%" stopColor="#081522" />
+        </radialGradient>
+        <clipPath id="earth-clip">
+          <circle cx="352" cy="174" r="56" />
+        </clipPath>
+        <filter id="orb-anomaly-glow" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <rect className={styles.graphFrame} x="1" y="1" width="678" height="318" rx="10" />
+      <g>
+        <circle cx="352" cy="174" r="112" fill="url(#orb-core-glow)" />
+        <ellipse className={styles.orbitLineMuted} cx="352" cy="174" rx="197" ry="58" transform="rotate(8 352 174)" />
+        <ellipse className={styles.orbitLine} cx="352" cy="174" rx="181" ry="52" transform="rotate(-27 352 174)" />
+        <ellipse className={styles.orbitLine} cx="352" cy="174" rx="170" ry="49" transform="rotate(38 352 174)" />
+        <ellipse className={styles.orbitLineDashed} cx="352" cy="174" rx="108" ry="142" transform="rotate(26 352 174)" />
+        <path className={styles.meshLine} d="M184 117l109 42M411 139l74-53M209 230l91-35M406 199l111 42" />
+        <g transform="translate(70.4 34.8) scale(0.8)">
+          <g clipPath="url(#earth-clip)">
+            <circle className={styles.earthOcean} cx="352" cy="174" r="56" />
+            <path
+              className={styles.earthLand}
+              d="M321 130l-15 10-8 14 9 8 7 13-5 12 10 8 5 18 10 11 7-9-4-18 7-14-8-9 5-13 10-9-11-7-8-12z"
+            />
+            <path
+              className={styles.earthLand}
+              d="M360 132l15-7 22 7 12 11-9 8 8 9-14 6-6 17-11 21-10-3 4-17-9-10-5-14-12-5 4-13z"
+            />
+            <path className={styles.earthLand} d="M390 200l12 2 7 10-7 8-13-4-5-9z" />
+            <ellipse className={styles.earthGrid} cx="352" cy="174" rx="52" ry="19" />
+            <path className={styles.earthGrid} d="M352 119c-17 18-24 36-24 55s7 38 24 55" />
+            <path className={styles.earthShade} d="M367 115c33 13 50 39 47 72-3 27-18 45-40 55 11-20 15-41 12-63-3-24-9-45-19-64z" />
+          </g>
+          <circle className={styles.earthOutline} cx="352" cy="174" r="56" />
+        </g>
+        <g className={styles.trackNode}>
+          <circle cx="184" cy="117" r="6" />
+          <circle cx="274" cy="77" r="5" />
+          <circle cx="485" cy="86" r="5" />
+          <circle cx="517" cy="241" r="6" />
+          <circle cx="425" cy="276" r="5" />
+          <circle cx="226" cy="188" r="5" />
+        </g>
+        <circle className={styles.satNodeWhite} cx="303" cy="257" r="6" />
+        <circle className={styles.anomalyHalo} cx="437" cy="111" r="17" />
+        <circle className={styles.anomalyNode} cx="437" cy="111" r="10" filter="url(#orb-anomaly-glow)" />
+      </g>
+      <text className={styles.graphLabel} x="38" y="36">ORBIT DATABASE: ONLINE</text>
+      <text className={styles.graphBlueLabel} x="38" y="58">ACTIVE TRACKS: 10,880 SATS</text>
+      <text className={styles.graphLabel} x="562" y="36">EPOCH: UTC-7</text>
+      <text className={styles.graphLabel} x="38" y="291">SWEEP STATUS: CONTINUOUS INGESTION</text>
+      <text className={styles.graphAlert} x="474" y="291">ANOMALIES LOGGED: 14,149</text>
     </svg>
   );
 }
@@ -260,12 +329,14 @@ export default function Home(): React.JSX.Element {
           <main>
             <section className={styles.productsSection} aria-labelledby="products-title">
               <div className={styles.sectionIntro}>
-                <h2 id="products-title" className={styles.sectionTitle}>Observe the field. Navigate the response.</h2>
+                <h2 id="products-title" className={styles.sectionTitle}>
+                  From Orbital Intelligence to Mission Action
+                </h2>
               </div>
 
               <div className={styles.productsGrid}>
                 <article id="argonavis" className={styles.productCard}>
-                  <span className={styles.productLabel}>Operations Console</span>
+                  <span className={styles.productLabel}>Agentic Operations Console</span>
                   <h3>ArgoNavis</h3>
                   <p>Operator-facing workflows for risk triage, maneuver planning, and safety gates.</p>
                   <ArgoNavisGraphic />
@@ -277,7 +348,9 @@ export default function Home(): React.JSX.Element {
                   <h3>ArgusOrb</h3>
                   <p>Data, models, and algorithms for space traffic, uncertainty, and anomalies.</p>
                   <ArgusOrbGraphic />
-                  <a className={styles.exploreLink} href="#research">Explore ArgusOrb</a>
+                  <a className={styles.exploreLink} href="https://argusorb.io/" target="_blank" rel="noreferrer">
+                    Explore ArgusOrb
+                  </a>
                 </article>
               </div>
             </section>

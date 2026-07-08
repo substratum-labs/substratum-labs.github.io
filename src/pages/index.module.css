@@ -326,7 +326,9 @@
     linear-gradient(180deg, rgba(16, 26, 43, 0.84), rgba(9, 15, 25, 0.92)),
     radial-gradient(circle at 80% 8%, rgba(134, 190, 231, 0.1), transparent 18rem);
   border: 1px solid var(--card-border);
-  min-height: 660px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   overflow: hidden;
   padding: clamp(1.5rem, 3vw, 2.6rem);
   position: relative;
@@ -367,29 +369,28 @@
   color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.65;
-  margin: 0 0 2.5rem;
+  margin: 0;
   max-width: 560px;
 }
 
 .productGraphic {
-  bottom: clamp(4.4rem, 6vw, 5rem);
+  aspect-ratio: 680 / 320;
   display: block;
-  left: clamp(1.25rem, 3vw, 2.4rem);
-  position: absolute;
-  right: clamp(1.25rem, 3vw, 2.4rem);
-  width: calc(100% - clamp(2.5rem, 6vw, 4.8rem));
+  margin-top: clamp(2.2rem, 4vw, 3.5rem);
+  position: static;
+  width: 100%;
 }
 
 .exploreLink {
   align-items: center;
-  bottom: clamp(1.6rem, 3vw, 2.4rem);
   color: var(--amber-transit);
   display: inline-flex;
   font-size: 0.72rem;
   font-weight: 800;
   gap: 0.55rem;
   letter-spacing: 0.14em;
-  position: absolute;
+  margin-top: 1.5rem;
+  position: static;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -419,6 +420,13 @@
   stroke-width: 1;
 }
 
+.graphFineGrid {
+  fill: none;
+  opacity: 0.14;
+  stroke: rgba(57, 91, 133, 0.6);
+  stroke-width: 0.8;
+}
+
 .scopeRing,
 .scopeRingMuted {
   fill: none;
@@ -430,26 +438,32 @@
   stroke: rgba(134, 190, 231, 0.08);
 }
 
+.scopeTicks {
+  fill: none;
+  stroke: rgba(134, 190, 231, 0.24);
+  stroke-width: 1;
+}
+
 .coastTrack {
   fill: none;
   opacity: 0.45;
   stroke: rgba(244, 239, 230, 0.5);
-  stroke-width: 2;
+  stroke-width: 2.3;
 }
 
 .riskTrack {
   fill: none;
   opacity: 0.5;
   stroke: var(--signal-red);
-  stroke-dasharray: 6 8;
-  stroke-width: 2;
+  stroke-dasharray: 8 8;
+  stroke-width: 2.2;
 }
 
 .burnArc {
   fill: none;
   stroke: var(--technical-blue);
   stroke-linecap: round;
-  stroke-width: 4;
+  stroke-width: 4.5;
 }
 
 .riskNode,
@@ -463,6 +477,12 @@
   stroke: var(--signal-red);
   stroke-dasharray: 4 4;
   stroke-width: 2;
+}
+
+.riskPulseOuter {
+  fill: rgba(220, 91, 78, 0.04);
+  stroke: rgba(220, 91, 78, 0.2);
+  stroke-width: 1;
 }
 
 .burnVector,
@@ -480,6 +500,13 @@
 
 .assetMarkerBlue {
   fill: var(--technical-blue);
+}
+
+.vectorGuide {
+  fill: none;
+  stroke: rgba(134, 190, 231, 0.46);
+  stroke-dasharray: 3 4;
+  stroke-width: 1;
 }
 
 .graphLabel,
@@ -500,16 +527,44 @@
   fill: var(--signal-red);
 }
 
-.orbitalCore {
-  fill: rgba(134, 190, 231, 0.07);
-  stroke: rgba(134, 190, 231, 0.15);
+.earthOcean {
+  fill: url('#earth-ocean');
+  opacity: 0.82;
+}
+
+.earthLand {
+  fill: rgba(112, 142, 144, 0.34);
+  stroke: rgba(187, 204, 197, 0.12);
+  stroke-width: 0.7;
+}
+
+.earthGrid {
+  fill: none;
+  opacity: 0.18;
+  stroke: rgba(150, 190, 204, 0.34);
+  stroke-width: 0.8;
+}
+
+.earthShade {
+  fill: rgba(2, 9, 16, 0.62);
+}
+
+.earthOutline {
+  fill: none;
+  stroke: rgba(134, 190, 231, 0.22);
+  stroke-width: 1.2;
 }
 
 .orbitLine,
+.orbitLineMuted,
 .orbitLineDashed {
   fill: none;
   stroke: rgba(134, 190, 231, 0.2);
   stroke-width: 1.5;
+}
+
+.orbitLineMuted {
+  opacity: 0.55;
 }
 
 .orbitLineDashed {
@@ -518,9 +573,16 @@
 
 .meshLine {
   fill: none;
-  opacity: 0.32;
+  opacity: 0.26;
   stroke: rgba(134, 190, 231, 0.45);
-  stroke-width: 1.2;
+  stroke-width: 0.9;
+}
+
+.globeLine {
+  fill: none;
+  opacity: 0.55;
+  stroke: rgba(134, 190, 231, 0.28);
+  stroke-width: 0.8;
 }
 
 .satNode,
@@ -530,6 +592,16 @@
 
 .satNodeWhite {
   fill: var(--parchment-white);
+}
+
+.trackNode {
+  fill: var(--technical-blue);
+}
+
+.anomalyHalo {
+  fill: none;
+  stroke: rgba(220, 91, 78, 0.2);
+  stroke-width: 1;
 }
 
 .scopeSection {
@@ -786,7 +858,7 @@
   }
 
   .productCard {
-    min-height: 620px;
+    min-height: 0;
   }
 
   .scopeGrid {
