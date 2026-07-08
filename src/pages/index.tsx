@@ -16,7 +16,6 @@ function BrandMark({className}: {className?: string}): React.JSX.Element {
         className={styles.logoHex}
         points="48 7 83.5 27.5 83.5 68.5 48 89 12.5 68.5 12.5 27.5"
       />
-      <circle className={styles.logoRing} cx="48" cy="48" r="25" />
       <circle className={styles.logoCore} cx="48" cy="48" r="8.5" />
       <g className={styles.logoBlades}>
         <path d="M48 23c8.6 0 16.2 4.3 20.7 10.8-7-1.9-13.3-0.8-18.1 3.7" />
@@ -396,7 +395,7 @@ export default function Home(): React.JSX.Element {
               <BrandMark className={styles.footerLogo} />
               <div>
                 <span className={styles.footerWordmark}>Substratum Labs</span>
-                <p>Intelligent infrastructure for high-consequence space operations.</p>
+                <p>Intelligent infrastructure for space operations.</p>
               </div>
             </div>
 
