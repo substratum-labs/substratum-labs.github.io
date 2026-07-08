@@ -60,7 +60,11 @@ const config: Config = {
     navbar: {
       title: 'Substratum Labs',
       items: [
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {href: 'https://substratumlabs.ai/#argonavis', label: 'ArgoNavis', position: 'left'},
+        {href: 'https://argusorb.io/', label: 'ArgusOrb', position: 'left'},
+        {to: '/blog', label: 'Research', position: 'left'},
+        {to: '/about', label: 'About', position: 'left'},
+        {to: '/contact', label: 'Contact', position: 'left'},
         {
           href: 'https://github.com/substratum-labs',
           label: 'GitHub',
@@ -75,21 +79,21 @@ const config: Config = {
           title: 'Products',
           items: [
             {label: 'ArgoNavis', href: 'https://substratumlabs.ai/#argonavis'},
-            {label: 'ArgusOrb', href: 'https://substratumlabs.ai/#argusorb'},
+            {label: 'ArgusOrb', href: 'https://argusorb.io/'},
           ],
         },
         {
           title: 'Research',
           items: [
             {label: 'Papers', to: '/blog'},
-            {label: 'Safety Notes', href: 'https://substratumlabs.ai/#about'},
+            {label: 'Safety Notes', to: '/blog'},
           ],
         },
         {
           title: 'Company',
           items: [
-            {label: 'About', href: 'https://substratumlabs.ai/#about'},
-            {label: 'Contact', href: 'https://substratumlabs.ai/#contact'},
+            {label: 'About', to: '/about'},
+            {label: 'Contact', to: '/contact'},
           ],
         },
       ],

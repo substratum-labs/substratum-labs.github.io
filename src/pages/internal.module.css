@@ -1,0 +1,233 @@
+:root {
+  --deep-space: #080c15;
+  --void-blue: #0d1524;
+  --panel-navy: rgba(14, 23, 38, 0.78);
+  --parchment-white: #f4efe6;
+  --warm-text: #e7dfd0;
+  --text-muted: rgba(231, 223, 208, 0.66);
+  --text-faint: rgba(231, 223, 208, 0.42);
+  --amber-transit: #c9933d;
+  --technical-blue: #86bee7;
+  --grid-line: rgba(57, 91, 133, 0.18);
+  --card-border: rgba(144, 169, 198, 0.18);
+}
+
+.page {
+  background:
+    radial-gradient(circle at 78% 8%, rgba(57, 91, 133, 0.2), transparent 32rem),
+    radial-gradient(circle at 16% 42%, rgba(201, 147, 61, 0.08), transparent 26rem),
+    linear-gradient(180deg, #070a12 0%, var(--void-blue) 42%, #080c15 100%);
+  color: var(--warm-text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.page::before {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-position: center top;
+  background-size: 64px 64px;
+  content: '';
+  inset: 0;
+  opacity: 0.58;
+  pointer-events: none;
+  position: fixed;
+}
+
+.page::after {
+  background-image:
+    radial-gradient(1px 1px at 15% 25%, rgba(244, 239, 230, 0.75), transparent),
+    radial-gradient(1px 1px at 45% 15%, rgba(244, 239, 230, 0.85), transparent),
+    radial-gradient(1px 1px at 75% 35%, rgba(244, 239, 230, 0.5), transparent),
+    radial-gradient(2px 2px at 65% 85%, rgba(201, 147, 61, 0.8), transparent);
+  background-size: 420px 420px;
+  content: '';
+  inset: 0;
+  opacity: 0.72;
+  pointer-events: none;
+  position: fixed;
+}
+
+.shell {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 8rem clamp(1.25rem, 5vw, 4.5rem) 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--amber-transit);
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.hero {
+  border-bottom: 1px solid rgba(144, 169, 198, 0.16);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
+  padding-bottom: 4.5rem;
+}
+
+.hero > :only-child {
+  max-width: 860px;
+}
+
+.simpleHero {
+  border-bottom: 0;
+}
+
+.hero h1 {
+  color: var(--parchment-white);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.8rem, 7vw, 7rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.94;
+  margin: 0 0 1.6rem;
+}
+
+.lede {
+  color: rgba(231, 223, 208, 0.72);
+  font-size: clamp(1rem, 1.4vw, 1.22rem);
+  line-height: 1.8;
+  margin: 0;
+  max-width: 760px;
+}
+
+.heroPanel {
+  align-self: end;
+  background:
+    linear-gradient(180deg, rgba(16, 26, 43, 0.82), rgba(9, 15, 25, 0.92)),
+    radial-gradient(circle at 82% 14%, rgba(134, 190, 231, 0.11), transparent 14rem);
+  border: 1px solid var(--card-border);
+  padding: 2rem;
+}
+
+.heroPanel h2,
+.card h2 {
+  color: var(--parchment-white);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin: 0 0 0.9rem;
+}
+
+.heroPanel p,
+.card p,
+.contactLine {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 4rem 0 0;
+}
+
+.card {
+  background: rgba(12, 20, 33, 0.72);
+  border: 1px solid rgba(144, 169, 198, 0.14);
+  min-height: 220px;
+  padding: 1.7rem;
+}
+
+.metric {
+  color: var(--technical-blue);
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.ctaRow {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  background: var(--amber-transit);
+  border: 1px solid var(--amber-transit);
+  color: var(--deep-space);
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  padding: 0.9rem 1.35rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--amber-transit);
+}
+
+.textLink {
+  color: var(--amber-transit);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.contactCard {
+  background:
+    linear-gradient(180deg, rgba(16, 26, 43, 0.84), rgba(9, 15, 25, 0.92)),
+    radial-gradient(circle at 82% 14%, rgba(134, 190, 231, 0.11), transparent 16rem);
+  border: 1px solid var(--card-border);
+  margin-top: 3rem;
+  padding: clamp(1.5rem, 3vw, 2.6rem);
+}
+
+.contactCard a {
+  color: var(--amber-transit);
+}
+
+.footer {
+  border-top: 1px solid rgba(144, 169, 198, 0.16);
+  color: var(--text-faint);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    padding-top: 5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.1rem, 15vw, 4.7rem);
+  }
+}

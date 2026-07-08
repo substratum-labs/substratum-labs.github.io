@@ -290,10 +290,10 @@ export default function Home(): React.JSX.Element {
             </a>
             <div className={styles.navLinks}>
               <a href="#argonavis" className={styles.navLink}>ArgoNavis</a>
-              <a href="#argusorb" className={styles.navLink}>ArgusOrb</a>
-              <a href="#research" className={styles.navLink}>Research</a>
-              <a href="#about" className={styles.navLink}>About</a>
-              <a href="#contact" className={styles.navLink}>Contact</a>
+              <a href="https://argusorb.io/" className={styles.navLink}>ArgusOrb</a>
+              <a href="/blog" className={styles.navLink}>Research</a>
+              <a href="/about" className={styles.navLink}>About</a>
+              <a href="/contact" className={styles.navLink}>Contact</a>
             </div>
           </nav>
 
@@ -321,7 +321,7 @@ export default function Home(): React.JSX.Element {
                 From satellite fleet safety to autonomous mission operations: operator-reviewed AI systems for
                 risk triage, maneuver planning, and auditable safety gates.
               </p>
-              <a href="#contact" className={styles.btn}>Request demo</a>
+              <a href="/contact" className={styles.btn}>Request demo</a>
             </div>
           </header>
 
@@ -339,7 +339,7 @@ export default function Home(): React.JSX.Element {
                   <h3>ArgoNavis</h3>
                   <p>Operator-facing workflows for risk triage, maneuver planning, and safety gates.</p>
                   <ArgoNavisGraphic />
-                  <a className={styles.exploreLink} href="#contact">Request Demo</a>
+                  <a className={styles.exploreLink} href="/contact">Request Demo</a>
                 </article>
 
                 <article id="argusorb" className={styles.productCard}>
@@ -403,17 +403,17 @@ export default function Home(): React.JSX.Element {
               <div>
                 <h3>Products</h3>
                 <a href="#argonavis">ArgoNavis</a>
-                <a href="#argusorb">ArgusOrb</a>
+                <a href="https://argusorb.io/">ArgusOrb</a>
               </div>
               <div>
                 <h3>Research</h3>
                 <a href="/blog">Papers</a>
-                <a href="#about">Safety Notes</a>
+                <a href="/blog">Safety Notes</a>
               </div>
               <div>
                 <h3>Company</h3>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
               </div>
             </div>
 
