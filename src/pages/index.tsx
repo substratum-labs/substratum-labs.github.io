@@ -92,7 +92,7 @@ function TrustIcon({type}: {type: string}): React.JSX.Element {
   );
 }
 
-function ArgoNavisGraphic(): React.JSX.Element {
+function ArgusGraphic(): React.JSX.Element {
   return (
     <svg className={styles.productGraphic} viewBox="0 0 680 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
       <defs>
@@ -289,7 +289,7 @@ export default function Home(): React.JSX.Element {
               <span className={styles.logoText}>Substratum Labs</span>
             </a>
             <div className={styles.navLinks}>
-              <a href="/contact" className={styles.navLink}>ArgoNavis</a>
+              <a href="/contact" className={styles.navLink}>Argus</a>
               <a href="https://argusorb.io/" className={styles.navLink}>ArgusOrb</a>
               <a href="/blog" className={styles.navLink}>Research</a>
               <a href="/about" className={styles.navLink}>About</a>
@@ -336,9 +336,9 @@ export default function Home(): React.JSX.Element {
               <div className={styles.productsGrid}>
                 <article id="argonavis" className={styles.productCard}>
                   <span className={styles.productLabel}>Agentic Operations Console</span>
-                  <h3>ArgoNavis</h3>
+                  <h3>Argus</h3>
                   <p>Operator-facing workflows for risk triage, maneuver planning, and safety gates.</p>
-                  <ArgoNavisGraphic />
+                  <ArgusGraphic />
                   <a className={styles.exploreLink} href="/contact">Request Demo</a>
                 </article>
 
@@ -402,7 +402,7 @@ export default function Home(): React.JSX.Element {
             <div className={styles.footerColumns}>
               <div>
                 <h3>Products</h3>
-                <a href="#argonavis">ArgoNavis</a>
+                <a href="#argonavis">Argus</a>
                 <a href="https://argusorb.io/">ArgusOrb</a>
               </div>
               <div>

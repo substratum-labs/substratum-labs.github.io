@@ -10,7 +10,7 @@ export default function Contact(): React.JSX.Element {
         <title>Contact | Substratum Labs</title>
         <meta
           name="description"
-          content="Contact Substratum Labs to discuss ArgoNavis, ArgusOrb, and intelligent infrastructure for space operations."
+          content="Contact Substratum Labs to discuss Argus, ArgusOrb, and intelligent infrastructure for space operations."
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -26,7 +26,7 @@ export default function Contact(): React.JSX.Element {
             <div>
               <h1>Contact</h1>
               <p className={styles.lede}>
-                Reach out to discuss Substratum Labs, ArgoNavis, ArgusOrb, or intelligent infrastructure for
+                Reach out to discuss Substratum Labs, Argus, ArgusOrb, or intelligent infrastructure for
                 space operations.
               </p>
             </div>
